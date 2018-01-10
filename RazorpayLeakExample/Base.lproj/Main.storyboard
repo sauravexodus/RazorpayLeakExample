@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EUv-L1-gpx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="WPS-lk-gtQ">
+            <objects>
+                <navigationController id="mAX-mK-0Yj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FFQ-gZ-pas">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3Ou-AW-TLG" kind="relationship" relationship="rootViewController" id="B8Q-DI-gTb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BRD-84-wHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-806" y="-636"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Izm-i4-ENL">
+            <objects>
+                <navigationController id="EUv-L1-gpx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kxE-eX-Stf">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lLZ-fw-p8A" kind="relationship" relationship="rootViewController" id="ej3-Vl-HJq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8n2-4P-CZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2305" y="-636"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="ZJi-s9-3Fw">
+            <objects>
+                <viewController id="lLZ-fw-p8A" customClass="MainViewController" customModule="RazorpayLeakExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CNT-8w-lOK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFw-Vp-1y2">
+                                <rect key="frame" x="106.5" y="318" width="161" height="30"/>
+                                <state key="normal" title="Show Payment Capture"/>
+                                <connections>
+                                    <action selector="showPaymentCaptureViewController:" destination="lLZ-fw-p8A" eventType="touchUpInside" id="Dhb-ha-CY7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BFw-Vp-1y2" firstAttribute="centerY" secondItem="CNT-8w-lOK" secondAttribute="centerY" id="WYo-zm-m4Z"/>
+                            <constraint firstItem="BFw-Vp-1y2" firstAttribute="centerX" secondItem="CNT-8w-lOK" secondAttribute="centerX" id="ivq-CR-vV0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lze-Dc-HGc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main View Controller" id="RqN-ar-v3E"/>
+                    <connections>
+                        <segue destination="mAX-mK-0Yj" kind="presentation" identifier="ShowPaymentCaptureViewController" id="MdP-Uz-huh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XzP-wr-71Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1580" y="-636"/>
+        </scene>
+        <!--Payment Capture View Controller-->
+        <scene sceneID="da3-rA-bys">
+            <objects>
+                <viewController id="3Ou-AW-TLG" customClass="PaymentCaptureViewController" customModule="RazorpayLeakExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W1e-0l-K4N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37d-DU-Z1b">
+                                <rect key="frame" x="128" y="192" width="119" height="30"/>
+                                <state key="normal" title="Capture Payment"/>
+                                <connections>
+                                    <action selector="capturePayment:" destination="3Ou-AW-TLG" eventType="touchUpInside" id="Y7R-zA-P6Z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gse-dC-ZZi">
+                                <rect key="frame" x="187.5" y="372" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="37d-DU-Z1b" firstAttribute="centerX" secondItem="W1e-0l-K4N" secondAttribute="centerX" id="1rp-1b-Re4"/>
+                            <constraint firstItem="37d-DU-Z1b" firstAttribute="top" secondItem="28v-hu-nbS" secondAttribute="top" constant="128" id="G4n-OI-wpr"/>
+                            <constraint firstItem="Gse-dC-ZZi" firstAttribute="centerX" secondItem="W1e-0l-K4N" secondAttribute="centerX" id="ZdX-lS-S0I"/>
+                            <constraint firstItem="Gse-dC-ZZi" firstAttribute="top" secondItem="37d-DU-Z1b" secondAttribute="bottom" constant="150" id="kkd-Bv-gGz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="28v-hu-nbS"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Payment Capture View Controller" id="vFP-ha-jjE">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="3Lx-oK-zZd">
+                            <connections>
+                                <action selector="close:" destination="3Ou-AW-TLG" id="FmD-uE-1al"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="statusLabel" destination="Gse-dC-ZZi" id="uhH-4f-bqJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rI6-n4-Xpc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-38" y="-636"/>
+        </scene>
+    </scenes>
+</document>
